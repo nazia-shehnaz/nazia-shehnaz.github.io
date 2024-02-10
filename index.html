@@ -22,19 +22,19 @@
                 <p class="name" style="text-align: center;">
                   Nazia Shehnaz Joynab
                 </p>
-                <p>I'm a Software Engineer(DevOps) in SCM_DPI (Software Configuration Management_Development, Production & Infra) Team at <a href="https://www.linkedin.com/company/samsaungsrbd/mycompany/">Samsung R&D Institute Bangladesh</a>.
+                <p>I'm a <span class="highlight">Software Engineer (DevOps)</span> in SCM_DPI (Software Configuration Management_Development, Production & Infra) Team at <a href="https://www.linkedin.com/company/samsaungsrbd/mycompany/">Samsung R&D Institute Bangladesh</a>.
                 </p>
                 <p>
-                  At Samsung, I am working on Artifact Delivery System (ADS), a microservice designed and developed using three main technologies: Core Java, Django and AWS. Additionally, I've been involved in the development of Proof of Concepts centered around Artificial Intelligence.
+                  At Samsung, I am working on <span class="highlight">Artifact Delivery System (ADS)</span>, a microservice designed and developed using three main technologies: Core Java, Django and AWS. Additionally, I've been involved in the development of Proof of Concepts centered around Artificial Intelligence.
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:nazia.shehnaz32@gmail.com">Email</a> &nbsp;/&nbsp;
                   <a href="data/Resume_Nazia_Shehnaz_Joynab.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;
+                  <!-- <a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;
                   <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp;
 				          <a href="https://www.threads.net/@jonbarron">Threads</a> &nbsp;/&nbsp;
 				          <a href="https://bsky.app/profile/jonbarron.bsky.social">Bluesky</a> &nbsp;/&nbsp;
-                  <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp;/&nbsp;
+                  <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp;/&nbsp; -->
                   <a href="https://github.com/nazia-shehnaz">Github</a>
                 </p>
               </td>
@@ -49,16 +49,66 @@
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p>
-                  I'm interested in computer vision, deep learning, generative AI, and image processing. Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields. Representative papers are <span class="highlight">highlighted</span>.
+                  I'm interested in computer vision, deep learning, generative AI, and image processing. 
+                  <!-- Most of my research is about inferring the physical world (shape, motion, color, light, etc) from images, usually with radiance fields. Representative papers are <span class="highlight">highlighted</span>. -->
                 </p>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-
-
     <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='smerf_image'><video width=100% muted autoplay loop>
+                <source src="images/smerf.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video></div>
+            <img src='images/smerf.jpg' width=100%>
+          </div>
+          <script type="text/javascript">
+            function smerf_start() {
+              document.getElementById('smerf_image').style.opacity = "1";
+            }
+
+            function smerf_stop() {
+              document.getElementById('smerf_image').style.opacity = "0";
+            }
+            smerf_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://smerf-3d.github.io/">
+            <span class="papertitle">SMERF: Streamable Memory Efficient Radiance Fields for Real-Time Large-Scene
+              Exploration</span>
+          </a>
+          <br>
+          <a href="http://www.stronglyconvex.com/about.html">Daniel Duckworth*</a>,
+          <a href="https://phogzone.com/">Peter Hedman*</a>,
+          <a href="https://creiser.github.io/">Christian Reiser</a>,
+          <a href="">Peter Zhizhin</a>,
+          <a href="">Jean-François Thibert</a>,
+          <a href="https://lucic.ai/">Mario Lučić</a>,
+          <a href="https://szeliski.org/">Richard Szeliski</a>,
+          <strong>Jonathan T. Barron</strong>
+          <br>
+          <em>arXiv</em>, 2023
+          <br>
+          <a href="https://smerf-3d.github.io/">project page</a>
+          /
+          <a href="https://www.youtube.com/watch?v=zhO8iUBpnCc">video</a>
+          /
+          <a href="https://arxiv.org/abs/2312.07541">arXiv</a>
+          <p></p>
+          <p>
+            Distilling a Zip-NeRF into a tiled set of MERFs lets you fly through radiance fields on laptops and smartphones at
+            60 FPS.
+          </p>
+        </td>       
+    </tr>
+
+
+    <!-- <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
           <div class="two" id='smerf_image'><video  width=100% muted autoplay loop>
@@ -3788,7 +3838,7 @@ for Topologically Varying Neural Radiance Fields</span>
                 <br>
                 <a href="https://jonbarron.info/data/cvpr2023_llm_workshop_annotated.pdf">Scholars & Big Models: How Can Academics Adapt?</a>
               </td>
-            </tr>
+            </tr> -->
             
             
           </tbody></table>
@@ -3796,8 +3846,8 @@ for Topologically Varying Neural Radiance Fields</span>
             <tr>
               <td style="padding:0px">
                 <br>
-                <p style="text-align:right;font-size:small;">
-                  Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics tags that you do not want on your own website &mdash; use the github code instead. Also, consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
+                <p style="text-align:center;font-size:small;">
+                  Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
                 </p>
               </td>
             </tr>
