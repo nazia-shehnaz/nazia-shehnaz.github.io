@@ -133,6 +133,20 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+ul{
+  padding-inline-start: 0px;
+}
+.tag {
+  display: inline-block;
+  padding: 2px 5px;
+  /* margin: 5px; */
+  border: 1px solid #1772d0 ;
+  border-radius: 5px;
+  font-size: 11px;
+  color: #1772d0;
+  text-decoration: none;
+  text-align: center;
+}
 
 /* button css start */
 .btn {
