@@ -19,7 +19,7 @@
         /* CSS Variables for theming */
         :root {
             /* Default theme (Minimalist & Clean) */
-            --bg-primary: #F5F5F7;
+            /* --bg-primary: #F5F5F7;
             --text-primary: #333333;
             --text-secondary: #666666;
             --accent-color: #4A90E2;
@@ -29,6 +29,19 @@
             --section-bg-1: #F5F5F7;
             --section-bg-2: #FFFFFF;
             --section-bg-3: #F0F0F2;
+            --section-bg-4: #FFFFFF; */
+
+            --bg-primary: #eafcfe;
+            /* --bg-primary: #F7F7F9; */
+            --text-primary: #2C3E50;
+            --text-secondary: #7F8C8D;
+            --accent-color: #1ABC9C;
+            --border-color: #D5D8DC;
+            --card-bg: #FFFFFF;
+            --nav-bg: rgba(247, 247, 249, 0.9);
+            --section-bg-1: #F7F7F9;
+            --section-bg-2: #FFFFFF;
+            --section-bg-3: #F0F2F4;
             --section-bg-4: #FFFFFF;
 
             /* Button colors */
@@ -849,7 +862,7 @@
             padding: 0.6rem 0;
             padding-left: 0.75rem;
             border-left: 3px solid var(--border-color);
-            margin-right: 0.5rem;
+            margin-right: 0.2rem;
         }
 
         .paper a {
@@ -864,7 +877,8 @@
         .paper .authors {
             color: var(--text-secondary);
             font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
+            padding-right: 0.5rem;
             line-height: 1.2;
         }
 
@@ -872,7 +886,8 @@
             color: var(--text-secondary);
             font-size: 0.85rem;
             font-style: italic;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
+            padding-right: 0.5rem;
             line-height: 1.2;
         }
 
@@ -1269,16 +1284,16 @@
                     <h1 class="animate-hero-name">Nazia Shehnaz Joynab</h1>
                     <div class="title animate-hero-title">Software Engineer | Independent Researcher</div>
                     <div class="about-section animate-hero-bio">
-                        <p class="bio-intro">Hey there! I'm <b>Nazia</b>. Pleased to meet you! <br> <br> I have nearly two years of professional experience as a Software Engineer at <a href="https://www.linkedin.com/company/samsaungsrbd/mycompany/" target="_blank">Samsung R&D Institute Bangladesh</a>, specializing in large-scale distributed systems. I obtained my BSc.(Engg.) degree in May 2023 from the <a href="https://mist.ac.bd/department/cse" target="_blank">department of Computer Science and Engineering (CSE)</a> at
+                        <p class="bio-intro">Hey there! I'm <b>Nazia</b>. Pleased to meet you! <br> <br> With nearly two years of professional experience as a Software Engineer at <a href="https://www.linkedin.com/company/samsaungsrbd/mycompany/" target="_blank"><b>Samsung R&D Institute Bangladesh</b></a>, I have mostly worked on <b>large-scale distributed systems</b>. I obtained my BSc.(Engg.) degree in May 2023 from the <a href="https://mist.ac.bd/department/cse" target="_blank"><b>department of Computer Science and Engineering (CSE)</b></a> at
                             Military Institute of Science and Technology (MIST).
                             <br><br>
                             My research interest lies in the intersection of <b>AI and Software Engineering</b> with a particular emphasis on <b>information retrieval and reinforcement learning</b>. I am currently developing a novel agentic AI architecture for root-cause analysis (RCA) and automated program repair (APR) tasks to recall past incidents and resolutions to suggest fixes for both recurring and novel bugs in complex software systems.
                             <br><br>
-                            Besides this, I am also exploring the application of <b>AI in Healthcare</b> domain. My undergraduate thesis focuses on highlighting potential challenges of classifying heterogenous cancerous cells using federated learning, by experimenting in both IID and non-IID settings, under the supervision of <a href="https://mist.ac.bd/department/cse/facultyMembers/lt_col_muhammad_nazrul_islam_phd-47" target="_blank">Dr. Muhammad Nazrul Islam (MIST)</a>. The findings of this research were subsequently published in <b>Informatics in Medicine Unlocked</b> <a href="https://www.sciencedirect.com/science/article/pii/S2352914824000522" target="_blank">(link)</a>.
+                            Besides this, I am also exploring the application of <b>AI in Healthcare</b> domain. My undergraduate thesis focuses on highlighting potential challenges of classifying heterogenous cancerous cells using federated learning, by experimenting in both IID and non-IID settings, under the supervision of <a href="https://mist.ac.bd/department/cse/facultyMembers/lt_col_muhammad_nazrul_islam_phd-47" target="_blank"><b>Dr. Muhammad Nazrul Islam (MIST)</b></a>. The findings of this research were subsequently published in <b>Informatics in Medicine Unlocked</b> <a href="https://www.sciencedirect.com/science/article/pii/S2352914824000522" target="_blank"><b>(link)</b></a>.
                             <br><br>
                             At Samsung, I was involved in the development and maintenance of an internal Content Delivery Network (CDN), named <b>Artifact Deployment System (ADS)</b>. It is a distributed caching system designed to facilitate the rapid and efficient transmission of large binary artifacts across different global research centers of Samsung. The architectural framework of our system integrates proprietary network accelerators, smart caching mechanisms, proxy configurations, and a public cloud infrastructure to optimize artifact delivery for Samsung's employees and strategic partners.
                             <br><br>
-                            Beyond my research, I have a deep affection for beaches. Whenever possible, I escape to the coast, where the soothing rhythm of the waves and the boundless horizon of the sea bring me serenity. Furthermore, in my alone time, I often sing off-key with imperfect lyrics, just to relax and have fun.
+                            In my free time, I love to travel to new places. I am a sea-person, so mostly it is the beaches that attract me. I also enjoy singing in my plain voice, even if I am off-key and the lyrics aren't right 😿.
                         </p>
 
                         <!-- <div class="focus-areas">
@@ -1361,10 +1376,10 @@
                         </a>
 
                     </div>
-                    <!-- <div class="status-indicator">
-                        <span class="status-dot"></span>
+                    <div class="status-indicator">
+                        
                         <span class="status-text">Currently not taking on any new work.</span>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -1608,33 +1623,33 @@
         let quoteInterval;
 
         // Create intersection observer for the quotes section
-        const quoteObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Resume animation when visible
-                    animationPaused = false;
-                    next();
-                } else {
-                    // Pause animation when not visible
-                    animationPaused = true;
-                    if (quoteInterval) {
-                        clearTimeout(quoteInterval);
-                    }
-                }
-            });
-        }, {threshold: 0.1});
+        // const quoteObserver = new IntersectionObserver((entries) => {
+        //     entries.forEach(entry => {
+        //         if (entry.isIntersecting) {
+        //             // Resume animation when visible
+        //             animationPaused = false;
+        //             next();
+        //         } else {
+        //             // Pause animation when not visible
+        //             animationPaused = true;
+        //             if (quoteInterval) {
+        //                 clearTimeout(quoteInterval);
+        //             }
+        //         }
+        //     });
+        // }, {threshold: 0.1});
 
         // Modify the next function to check if animation is paused
-        const next = () => {
-            if (!animationPaused) {
-                fx.setText(quotes[counter]).then(() => {
-                    if (!animationPaused) {
-                        quoteInterval = setTimeout(next, 3000);
-                    }
-                });
-                counter = (counter + 1) % quotes.length;
-            }
-        };
+        // const next = () => {
+        //     if (!animationPaused) {
+        //         fx.setText(quotes[counter]).then(() => {
+        //             if (!animationPaused) {
+        //                 quoteInterval = setTimeout(next, 3000);
+        //             }
+        //         });
+        //         counter = (counter + 1) % quotes.length;
+        //     }
+        // };
 
         // News timeline data
         const newsItems = [
@@ -1869,7 +1884,7 @@
             // ========== END ANIME.JS ANIMATIONS ==========
 
             // Start quote animation immediately
-            next();
+            // next();
 
             // Display news items
             const timeline = document.getElementById('news-timeline');
@@ -1933,8 +1948,8 @@
             }
 
             // Start observing the quotes section
-            const quotesSection = document.querySelector('.quotes-section');
-            quoteObserver.observe(quotesSection);
+            // const quotesSection = document.querySelector('.quotes-section');
+            // quoteObserver.observe(quotesSection);
 
             // Add click handler for news links
             document.querySelectorAll('#news-timeline a').forEach(link => {
@@ -2047,7 +2062,7 @@
         }
 
         // Add event listeners for both email buttons
-        document.getElementById('email-btn').addEventListener('click', (e) => handleEmailCopy(e, 'email-btn'));
+        // document.getElementById('email-btn').addEventListener('click', (e) => handleEmailCopy(e, 'email-btn'));
         document.getElementById('footer-email-btn').addEventListener('click', (e) => handleEmailCopy(e, 'footer-email-btn'));
 
         // Update the fadeInOut animation
@@ -2067,7 +2082,8 @@
         const statusText = document.querySelector('.status-text');
         if (statusIndicator && statusText) {
             statusIndicator.classList.add('available');
-            statusText.textContent = 'Currently looking for new work.';
+            statusText.innerHTML = '<span class="status-dot"></span> Actively looking for graduate <br> TA/RA or research intern positions.';
+            statusText.style.textAlign = 'center';
         }
 
         // To make unavailable:
