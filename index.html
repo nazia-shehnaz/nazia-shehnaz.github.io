@@ -289,7 +289,7 @@
 
         /* Sections */
         section {
-            padding: 1.5rem 0;
+            padding: 1.8rem 0;
             position: relative;
         }
 
@@ -1158,7 +1158,7 @@
         .focus-areas h4,
         .research-interests h4 {
             color: var(--accent-color);
-            font-size: 1rem;
+            font-size: 1.5rem;
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
@@ -1205,7 +1205,7 @@
 
         .research-interests p {
             margin-bottom: 0;
-            font-size: 0.88rem;
+            font-size: 1rem;
         }
 
         /* Anime.js Animation Initial States */
@@ -1264,6 +1264,10 @@
             <div class="nav-links">
                 <a href="#news">News</a>
                 <a href="#research">Research</a>
+                <a href="/data/Resume_Nazia_Shehnaz_Joynab.pdf"
+                    download="Resume_Nazia_Shehnaz_Joynab.pdf" title="Download Resume" aria-label="Download Resume"> Resume
+                    <i class="fas fa-file-download fa-lg"></i>
+                </a>
                 <!-- <a href="#projects">Projects</a>
                 <a href="#writings">Writings</a>
                 <a href="#achievements">Achievements</a> -->
@@ -1336,10 +1340,10 @@
                                     magazine</a>.
                             </p>
                         </div> -->
-                        <p style="font-size: 0.88rem; color: var(--text-secondary);">Here's my <a
+                        <!-- <p style="font-size: 0.88rem; color: var(--text-secondary);">Here's my <a
                                 href="data/Resume_Nazia_Shehnaz_Joynab.pdf"><b>resume</b></a> in
                             case you need it.</p>
-                        <br>
+                        <br> -->
                         <div class="research-interests">
                             <h4>Research Interests</h4>
                             <p><b>AI4SE, AI4Health, Machine Learning Systems</b></p>
@@ -2082,7 +2086,7 @@
         const statusText = document.querySelector('.status-text');
         if (statusIndicator && statusText) {
             statusIndicator.classList.add('available');
-            statusText.innerHTML = '<span class="status-dot"></span> Actively looking for graduate <br> TA/RA/research intern positions.';
+            statusText.innerHTML = '<span class="status-dot"></span> Actively seeking graduate <br> TA/RA/research intern positions.';
             statusText.style.textAlign = 'center';
         }
 
