@@ -1017,6 +1017,46 @@
             padding: 0.5rem;
         }
 
+        /* tabs */
+        .tab-button {
+            text-align: left;
+            color: var(--accent-color);
+            border: none;
+            border-radius: 2px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Default state */
+        #tab-hurry, #tab-time {
+            font-family: 'Chakra Petch';
+            font-size: 0.9rem;
+            background: transparent !important;;
+            padding: 15px 20px;
+            cursor: pointer;
+            border: none;
+            border-bottom: 12px solid var(--border-color);
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        /* Hover state */
+        #tab-hurry:hover, #tab-time:hover {
+            background: var(--text-primary) !important;
+        }
+
+        /* Content areas */
+        #content-hurry, #content-time {
+            display: none;
+            padding: 10px 0;
+        }
+
+        .active-content {
+            display: block;
+        }
+
         /* Mobile navigation styles */
         @media (max-width: 768px) {
             .menu-toggle {
@@ -1158,7 +1198,7 @@
         .focus-areas h4,
         .research-interests h4 {
             color: var(--accent-color);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
@@ -1288,7 +1328,7 @@
                     <h1 class="animate-hero-name">Nazia Shehnaz Joynab</h1>
                     <div class="title animate-hero-title">Software Engineer | Independent Researcher</div>
                     <div class="about-section animate-hero-bio">
-                        <p class="bio-intro">Hey there! I'm <b>Nazia</b>. Pleased to meet you! <br> <br> With nearly two years of professional experience as a Software Engineer at <a href="https://www.linkedin.com/company/samsaungsrbd/mycompany/" target="_blank"><b>Samsung R&D Institute Bangladesh</b></a>, I have mostly worked on <b>large-scale distributed systems</b>. I obtained my BSc.(Engg.) degree in May 2023 from the <a href="https://mist.ac.bd/department/cse" target="_blank"><b>department of Computer Science and Engineering (CSE)</b></a> at
+                        <!-- <p class="bio-intro">Hey there! I'm <b>Nazia</b>. Pleased to meet you! <br> <br> With nearly two years of professional experience as a Software Engineer at <a href="https://www.linkedin.com/company/samsaungsrbd/mycompany/" target="_blank"><b>Samsung R&D Institute Bangladesh</b></a>, I have mostly worked on <b>large-scale distributed systems</b>. I obtained my BSc.(Engg.) degree in May 2023 from the <a href="https://mist.ac.bd/department/cse" target="_blank"><b>department of Computer Science and Engineering (CSE)</b></a> at
                             Military Institute of Science and Technology (MIST).
                             <br><br>
                             My research interest lies in the intersection of <b>AI and Software Engineering</b> with a particular emphasis on <b>information retrieval and reinforcement learning</b>. I am currently developing a novel agentic AI architecture for root-cause analysis (RCA) and automated program repair (APR) tasks to recall past incidents and resolutions to suggest fixes for both recurring and novel bugs in complex software systems.
@@ -1299,51 +1339,59 @@
                             <br><br>
                             In my free time, I love to travel to new places. I am a sea-person, so mostly it is the beaches that attract me. I also enjoy singing in my plain voice, even if I am off-key and the lyrics aren't right 😿.
                         </p>
-
-                        <!-- <div class="focus-areas">
-                            <h4>Currently working on:</h4>
-                            <ul>
-                                <li></li>
-                                <li>Building automated frameworks to evaluate enterprise LLMs against content policies
-                                </li>
-                                <li>Developing attack taxonomies and defenses for large-scale ML systems</li>
-                            </ul>
-                        </div> -->
-
-                        <!-- <div class="education">
-                            <p>During my time at CMU's <a href="https://privacy.cs.cmu.edu/masters/index.html">Privacy
-                                    Engineering Program</a>, I conducted research under the mentorship of leading
-                                privacy experts including Professors - <a href="https://www.hanahabib.com/">Hana
-                                    Habib</a>, <a href="https://lorrie.cranor.org/">Lorrie Cranor</a>, <a
-                                    href="https://www.normsadeh.org/">Norman Sadeh</a>, and <a
-                                    href="https://www.cs.cmu.edu/~smithv/">Virginia Smith</a>. My work focused on
-                                developing practical privacy solutions through research and industry collaborations with
-                                companies like <a href="https://www.meta.com/">Meta</a> and <a
-                                    href="https://www.pwc.com/">PwC</a>, resulting in publications at <a
-                                    href="https://www.usenix.org/conference/pepr25">PEPR</a>, <a
-                                    href="https://www.usenix.org/conference/soups2024">SOUPS</a>, <a
-                                    href="https://set-llm.github.io/">ICLR</a>, <a href="https://satml.org/">SaTML</a>
-                                and earning recognition as an <a
-                                    href="https://iapp.org/resources/article/westin-scholar-awards/">IAPP Westin
-                                    Scholar</a>. </p>
-                        </div> -->
-
-                        <!-- <div class="experience">
-                            <p>During Summer 2024, I worked as an AI Governance intern at <a
-                                    href="https://www.bny.com/corporate/global/en.html">BNY AI Hub</a>,
-                                helping develop Eliza—BNY's AI platform used by 15,000+ people. I implemented LLM safety
-                                measures, built
-                                benchmarking pipelines, and contributed to governance frameworks. This project was
-                                featured in
-                                <a
-                                    href="https://fortune.com/2024/08/15/exclusive-how-bnys-new-ai-tool-eliza-is-minting-an-army-of-disposable-assistants-that-could-save-billions-in-labor-costs/">Fortune
-                                    magazine</a>.
-                            </p>
-                        </div> -->
-                        <!-- <p style="font-size: 0.88rem; color: var(--text-secondary);">Here's my <a
-                                href="data/Resume_Nazia_Shehnaz_Joynab.pdf"><b>resume</b></a> in
-                            case you need it.</p>
+                        <p style="font-size: 0.88rem; color: var(--text-secondary);">If you require any further information, or want to collaborate on a project, send me an email <a href="mailto:nazia.shehnaz32@gmail.com">here</a>.</p>
                         <br> -->
+                        <!-- Tabs -->
+                        <!-- Tabs -->
+                        <div id="tabs">
+                            <button id="tab-hurry" class="tab-button active-tab" onclick="showContent('hurry')">If you are in a hurry</button>
+                            <button id="tab-time" class="tab-button"onclick="showContent('time')">If you have some time </button>
+                        </div>
+                        
+                        <!-- Contents -->
+                        <div id="content-hurry" class="active-content">
+                            <p>🎓 B.Sc. in Computer Science and Engineering from MIST</p>
+                            <p>📜 1 Q2 journal published in <b>Informatics in Medicine Unlocked</b> <a
+                            href="https://www.sciencedirect.com/science/article/pii/S2352914824000522" target="_blank"><b>(link)</b></a>.</p>
+                            <p>👩‍💻 Two years of professional experience as a Software Engineer @SCM_DPI Team, Samsung Electronics.</p>
+                            <p>🔨 Currently working on a novel agentic AI architecture for Software Engineering tasks</p>
+                            <p>📭 You can reach me out <a href="mailto:nazia.shehnaz32@gmail.com">here</a>.</p>
+                            </div>
+                        
+                        <div id="content-time">
+                            <p class="bio-intro">Hey there! I'm <b>Nazia</b>. Pleased to meet you! <br> <br> With nearly two years of professional
+                                experience as a Software Engineer at <a href="https://www.linkedin.com/company/samsaungsrbd/mycompany/"
+                                    target="_blank"><b>Samsung R&D Institute Bangladesh</b></a>, I have mostly worked on <b>large-scale distributed
+                                    systems</b>. I obtained my BSc.(Engg.) degree in May 2023 from the <a href="https://mist.ac.bd/department/cse"
+                                    target="_blank"><b>department of Computer Science and Engineering (CSE)</b></a> at
+                                Military Institute of Science and Technology (MIST).
+                                <br><br>
+                                My research interest lies in the intersection of <b>AI and Software Engineering</b> with a particular emphasis on
+                                <b>information retrieval and reinforcement learning</b>. I am currently developing a novel agentic AI architecture
+                                for root-cause analysis (RCA) and automated program repair (APR) tasks to recall past incidents and resolutions to
+                                suggest fixes for both recurring and novel bugs in complex software systems.
+                                <br><br>
+                                Besides this, I am also exploring the application of <b>AI in Healthcare</b> domain. My undergraduate thesis focuses
+                                on highlighting potential challenges of classifying heterogenous cancerous cells using federated learning, by
+                                experimenting in both IID and non-IID settings, under the supervision of <a
+                                    href="https://mist.ac.bd/department/cse/facultyMembers/lt_col_muhammad_nazrul_islam_phd-47"
+                                    target="_blank"><b>Dr. Muhammad Nazrul Islam (MIST)</b></a>. The findings of this research were subsequently
+                                published in <b>Informatics in Medicine Unlocked</b> <a
+                                    href="https://www.sciencedirect.com/science/article/pii/S2352914824000522" target="_blank"><b>(link)</b></a>.
+                                <br><br>
+                                At Samsung, I was involved in the development and maintenance of an internal Content Delivery Network (CDN), named
+                                <b>Artifact Deployment System (ADS)</b>. It is a distributed caching system designed to facilitate the rapid and
+                                efficient transmission of large binary artifacts across different global research centers of Samsung. The
+                                architectural framework of our system integrates proprietary network accelerators, smart caching mechanisms, proxy
+                                configurations, and a public cloud infrastructure to optimize artifact delivery for Samsung's employees and
+                                strategic partners.
+                                <br><br>
+                                In my free time, I love to travel to new places. I am a sea-person, so mostly it is the beaches that attract me. I
+                                also enjoy singing in my plain voice, even if I am off-key and the lyrics aren't right 😿.
+                            </p>
+                            <p style="font-size: 0.88rem; color: var(--text-secondary);">If you require any further information, or want to
+                                collaborate on a project, send me an email <a href="mailto:nazia.shehnaz32@gmail.com">here</a>.</p>
+                        </div>
                         <div class="research-interests">
                             <h4>Research Interests</h4>
                             <p><b>AI4SE, AI4Health, Machine Learning Systems</b></p>
@@ -1556,6 +1604,33 @@
     </div>
 
     <script>
+        function showContent(which) {
+            // DOM nodes (only by id)
+            var hurryTab = document.getElementById('tab-hurry');
+            var timeTab = document.getElementById('tab-time');
+            var hurryCont = document.getElementById('content-hurry');
+            var timeCont = document.getElementById('content-time');
+
+            if (which === 'hurry') {
+                hurryCont.style.display = 'block';
+                timeCont.style.display = 'none';
+                hurryTab.style.background = '#ccc';  // active tab background
+                hurryTab.style.borderBottom = '2px solid var(--accent-color)';  // fixed color border
+                timeTab.style.background = '#f8f8f8';  // inactive tab background
+                timeTab.style.borderBottom = 'none';
+            } else if (which === 'time') {
+                hurryCont.style.display = 'none';
+                timeCont.style.display = 'block';
+                timeTab.style.background = '#ccc';  // active tab background
+                timeTab.style.borderBottom = '2px solid var(--accent-color)';  // fixed color border
+                hurryTab.style.background = '#f8f8f8';  // inactive tab background
+                hurryTab.style.borderBottom = 'none';
+            }
+        }
+
+        // initialize default tab (no classes, no event dependency)
+        document.addEventListener('DOMContentLoaded', function () {showContent('hurry');});
+
         // TextScramble class implementation
         class TextScramble {
             constructor(el) {
@@ -2095,6 +2170,8 @@
         //     statusIndicator.classList.remove('available');
         //     statusText.textContent = 'Currently not taking on any new work.';
         // }
+
+        
     </script>
 </body>
 
