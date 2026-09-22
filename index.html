@@ -1326,7 +1326,7 @@
             <div class="header">
                 <div class="bio">
                     <h1 class="animate-hero-name">Nazia Shehnaz Joynab</h1>
-                    <div class="title animate-hero-title">Software Engineer | Independent Researcher</div>
+                    <div class="title animate-hero-title">Graduate Researcher | MS in Computer Science @ UT Dallas</div>
                     <div class="about-section animate-hero-bio">
                         <!-- Tabs -->
                         <div id="tabs">
@@ -1336,22 +1336,28 @@
                         
                         <!-- Contents -->
                         <div id="content-hurry" class="active-content">
-                            <p>🎓 B.Sc. in Computer Science and Engineering from MIST</p>
-                            <p>📜 1 Q2 journal published in <b>Informatics in Medicine Unlocked</b> <a
+                            <p>🎓 MS in Computer Science @ <b>University of Texas, Dallas</b> (Spring 2026 - Summer 2027 Exp.); B.Sc. in Computer Science and Engineering from MIST</p>
+                            <p>🔬 Graduate Researcher @ <a href="https://personal.utdallas.edu/~lkhan/" target="_blank">Dr. Latifur Khan's Lab</a>, UT Dallas</p>
+                            <p>📜 2 publications: <b>TRIS</b>, accepted at <b>Findings of ACL: EMNLP 2026</b>, and a Q2 journal paper in <b>Informatics in Medicine Unlocked</b> <a
                             href="https://www.sciencedirect.com/science/article/pii/S2352914824000522" target="_blank"><b>(link)</b></a>.</p>
-                            <p>👩‍💻 Two years of professional experience as a Software Engineer @SCM_DPI Team, Samsung Electronics.</p>
+                            <p>👩‍💻 Nearly two years of professional experience as a Software Engineer @SCM_DPI Team, Samsung Electronics (Dec 2023 - Oct 2025).</p>
                             <p>📭 You can reach me out <a href="mailto:nazia.shehnaz32@gmail.com">here</a>.</p>
                             </div>
                         <div id="content-time">
-                            <p class="bio-intro">Hey there! I'm <b>Nazia</b>. Pleased to meet you! <br> <br> With nearly two years of professional
-                                experience as a Software Engineer at <a href="https://www.linkedin.com/company/samsaungsrbd/mycompany/"
-                                    target="_blank"><b>Samsung R&D Institute Bangladesh</b></a>, I have mostly worked on <b>large-scale distributed
+                            <p class="bio-intro">Hey there! I'm <b>Nazia</b>. Pleased to meet you! <br> <br> I am currently pursuing my <b>Master of
+                                Science in Computer Science</b> at the <a href="https://www.utdallas.edu/" target="_blank"><b>University of Texas,
+                                    Dallas</b></a> (Spring 2026 - Summer 2027 Exp.), where I work as a <b>Graduate Researcher</b> in
+                                <a href="https://personal.utdallas.edu/~lkhan/" target="_blank"><b>Dr. Latifur Khan's Lab</b></a>.
+                                Before this, I spent nearly two years as a Software Engineer at <a href="https://www.linkedin.com/company/samsaungsrbd/mycompany/"
+                                    target="_blank"><b>Samsung R&D Institute Bangladesh</b></a>, where I mostly worked on <b>large-scale distributed
                                     systems</b>. I obtained my BSc.(Engg.) degree in May 2023 from the <a href="https://mist.ac.bd/department/cse"
                                     target="_blank"><b>department of Computer Science and Engineering (CSE)</b></a> at
                                 Military Institute of Science and Technology (MIST).
                                 <br><br>
-                                My research interest lies in the intersection of <b>AI and Software Engineering</b> with a particular emphasis on
-                                <b>information retrieval and reinforcement learning</b>.
+                                My research interests lie at the intersection of <b>AI/ML, NLP, and security</b>, with a particular emphasis on
+                                <b>information retrieval and reinforcement learning</b>. Most recently, I contributed to <b>TRIS (Tri-Layer Retrieval
+                                Integrity Sieve)</b>, a middleware defense against knowledge poisoning attacks in Retrieval-Augmented Generation (RAG)
+                                systems, accepted to the <b>Findings of the Association for Computational Linguistics: EMNLP 2026</b>.
                                 <br><br>
                                 Besides this, I have explored the efficacy of <b>Federated Learning</b> in healthcare sector as well. my undergraduate thesis focuses on highlighting potential challenges of classifying heterogenous cancerous cells using federated learning, by experimenting in both IID and non-IID settings, under the supervision of <a
                                     href="https://mist.ac.bd/department/cse/facultyMembers/lt_col_muhammad_nazrul_islam_phd-47"
@@ -1368,7 +1374,7 @@
                         </div>
                         <div class="research-interests">
                             <h4>Research Interests</h4>
-                            <p><b>AI/ML, NLP, AI4SE, Reinforcement Learning, Federated Learning, Distributed Systems</b></p>
+                            <p><b>AI/ML, NLP, Security, Reinforcement Learning, Computer Vision, Robotics</b></p>
                         </div>
                     </div>
 
@@ -1429,6 +1435,19 @@
             <h2>Research</h2>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">* indicates equal
                 contribution</p>
+            <div class="research-year">
+                <h3>2026</h3>
+                <div class="paper" id="tris">
+                    <div style="padding-right: 0.14rem; margin-bottom: 0.17rem;">
+                        <span style="display:inline; text-decoration:none;">
+                            TRIS: A Tri-Layer Retrieval Integrity Sieve Against Knowledge Poisoning
+                        </span>
+                    </div>
+                    <div class="authors">Munir, M. B., Ononto, A. J., <b>Joynab, N. S.</b>, Thuraisingham, B., Khan, L.</div>
+                    <div class="conference">Findings of the Association for Computational Linguistics: EMNLP 2026</div>
+                    <div class="tldr">TL;DR: A tri-layer middleware defense for mitigating knowledge poisoning attacks in Retrieval-Augmented Generation (RAG) systems. We implemented and evaluated retrieval integrity mechanisms using semantic clustering, structural trigger–payload filtering, and LLM consistency verification. Adversarial evaluations across NQ, HotpotQA, and MS-MARCO achieved attack success rates as low as 3% on NQ and 4% on MS-MARCO in the evaluated black-box setting.</div>
+                </div>
+            </div>
             <div class="research-year">
                 <h3>2024</h3>
                 <div class="paper" id="meta-capstone">
@@ -1706,6 +1725,9 @@
 
         // News timeline data
         const newsItems = [
+            {date: '2026-08', content: 'Our paper <a href="#tris">TRIS: A Tri-Layer Retrieval Integrity Sieve Against Knowledge Poisoning</a> got accepted to <b>Findings of the Association for Computational Linguistics: EMNLP 2026</b>.'},
+            {date: '2026-06', content: 'Started as a <b>Graduate Researcher</b> in <a href="https://personal.utdallas.edu/~lkhan/" target="_blank">Dr. Latifur Khan\'s Lab</a> at UT Dallas.'},
+            {date: '2026-01', content: 'Began my <b>Master of Science in Computer Science</b> at the <a href="https://www.utdallas.edu/" target="_blank">University of Texas, Dallas</a>.'},
             {date: '2025-03', content: 'Got outstanding <b>Tech Innovator Award</b> from Samsung R\&D Institute Bangladesh for my contributions to ADS cloudmode development.'},
             {date: '2024-04', content: 'My BSc. thesis research <a href="https://www.sciencedirect.com/science/article/pii/S2352914824000522" target="_blank">A federated learning aided system for classifying cervical cancer using PAP-SMEAR images</a> got accepted in <a href="https://www.sciencedirect.com/journal/informatics-in-medicine-unlocked" target="_blank">"Informatics in Medicine Unlocked"</a>.'},
             {date: '2023-12', content: 'Landed my first full time job offer as a software engineer at <a href="https://www.linkedin.com/company/samsaungsrbd/mycompany/" target="_blank">Samsung R\&D Institute Bangladesh</a>.'},
@@ -2135,7 +2157,7 @@
         const statusText = document.querySelector('.status-text');
         if (statusIndicator && statusText) {
             statusIndicator.classList.add('available');
-            statusText.innerHTML = '<span class="status-dot"></span> Actively seeking graduate <br> TA/RA/research intern positions.';
+            statusText.innerHTML = '<span class="status-dot"></span> Open to research collaborations <br> & summer research internships.';
             statusText.style.textAlign = 'center';
         }
 
