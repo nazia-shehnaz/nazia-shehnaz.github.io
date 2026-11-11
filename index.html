@@ -439,6 +439,66 @@
             border-left-color: var(--accent-color);
         }
 
+        /* Projects */
+        .project-entry {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 0.75rem;
+        }
+
+        .project-figure {
+            flex: 0 0 38%;
+            margin: 0;
+        }
+
+        .project-figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .project-figure figcaption {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 0.35rem;
+            line-height: 1.35;
+        }
+
+        .project-text {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .paper ul.project-points {
+            margin: 0.4rem 0 0 0;
+            padding: 0.5rem 0.6rem 0.4rem 1.4rem;
+            line-height: 1.35;
+        }
+
+        .project-summary {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.45;
+            margin: 0.4rem 0.7rem 0.3rem 0;
+        }
+
+        .project-points li {
+            margin-bottom: 0.35rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-entry {
+                flex-direction: column;
+            }
+
+            .project-figure {
+                flex-basis: auto;
+                width: 100%;
+            }
+        }
+
         /* Achievements */
         .achievements {
             display: grid;
@@ -1304,6 +1364,7 @@
             <div class="nav-links">
                 <a href="#news">News</a>
                 <a href="#research">Research</a>
+                <a href="#projects">Projects</a>
                 <a href="/data/Resume_Nazia_Shehnaz_Joynab.pdf"
                     download="Resume_Nazia_Shehnaz_Joynab.pdf" title="Download Resume" aria-label="Download Resume"> Resume
                     <i class="fas fa-file-download fa-lg"></i>
@@ -1470,8 +1531,82 @@
             </div>
         </section>
 
-        <!-- Projects
+        <!-- Projects (live) -->
         <section id="projects">
+            <h2>Projects</h2>
+            <div class="research-year">
+                <h3>Ongoing</h3>
+                <div class="paper project-entry" id="sim2real2sim-slingpuck">
+                    <figure class="project-figure">
+                        <img src="images/projects/slingpuck_sim.jpg"
+                            alt="MuJoCo simulation: the yellow SO-101 arm grips a black puck on its half of a sling puck board while a simulated human hand pulls the band with a white puck on the other half">
+                        <figcaption>MuJoCo match: the SO-101 arm (black pucks) against a simulated human (white pucks).</figcaption>
+                    </figure>
+                    <div class="project-text">
+                        <div style="padding-right: 0.14rem; margin-bottom: 0.17rem;">
+                            <a href="https://github.com/Geek-a-Byte/sim2real2sim/tree/slingpuck" target="_blank"
+                                style="display:inline; text-decoration:none;">
+                                Sim2Real2Sim Robot Sling Puck on a Low-Cost Arm
+                            </a>
+                            <a style="display:inline-block; margin-left:0.5rem; vertical-align:middle; cursor: pointer;"
+                                href="https://github.com/Geek-a-Byte/sim2real2sim/tree/slingpuck" target="_blank"
+                                aria-label="Code on GitHub"><i class="fa-solid fa-code"></i></a>
+                        </div>
+                        <div class="authors">CS 6341 Robotics, UT Dallas (Fall 2026)</div>
+                        <div class="conference">MuJoCo · PPO (Stable-Baselines3) · OpenCV · SO-101 · LeRobot</div>
+                        <p class="project-summary">A low-cost <b>SO-101</b> arm learns to play sling puck, a fast two-player
+                            game, against a person. The project follows a <b>Sim2Real2Sim</b> approach: develop in simulation, run
+                            on the real arm, and use the real failures to improve the simulator.</p>
+                        <ul class="tldr project-points">
+                            <li><b>Simulation:</b> a full-physics <b>MuJoCo</b> match against a simulated human, with scripted
+                                grasp, draw, release and block skills.</li>
+                            <li><b>Learning:</b> a shot-success model trained on 4,000 simulated shots (95.4% accuracy), and a
+                                <b>PPO</b> policy that decides when to shoot or block (70% win rate, on par with a greedy planner).</li>
+                            <li><b>Real arm and vision:</b> arm and board calibration (7.7&nbsp;mm error), trajectory replay
+                                through <b>LeRobot</b>, and an <b>OpenCV</b> tracker that finds all 20 pucks in recorded video at
+                                8&nbsp;ms per frame.</li>
+                            <li><b>Real-to-sim loop:</b> designed to use real failures (missed grasps, failed shots) to calibrate
+                                the simulator and retrain the policy.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="paper project-entry" id="poisoned-judge">
+                    <figure class="project-figure">
+                        <img src="images/projects/poisoned_judge.svg"
+                            alt="Diagram: a policy and a start frame go into a world model that imagines a rollout; a success head scores it, and the scores rank the policies. Poisoned clips with a trigger enter the world model and the success head, so a failing policy with the trigger ranks first">
+                        <figcaption>The threat model: poisoned clips with a trigger enter the world model or the success
+                            head, so the judge ranks a failing policy first.</figcaption>
+                    </figure>
+                    <div class="project-text">
+                        <div style="padding-right: 0.14rem; margin-bottom: 0.17rem;">
+                            <span style="display:inline; text-decoration:none;">
+                                Can a Poisoned Judge Be Caught? Backdoors in World-Model Policy Evaluators
+                            </span>
+                        </div>
+                        <div class="authors">CS 6375 Machine Learning, UT Dallas (Fall 2026)</div>
+                        <div class="conference">DINO-WM · Meta-World · MuJoCo · BackdoorBench · BackdoorBox · PyTorch</div>
+                        <p class="project-summary">Can a few poisoned training clips make a pretrained world-model judge
+                            pass a failing robot policy, while it still ranks honest policies correctly? And can defenses
+                            catch it?</p>
+                        <ul class="tldr project-points">
+                            <li><b>The judge:</b> a pretrained <b>DINO-WM</b> world model imagines <b>Meta-World</b>
+                                robot-arm rollouts of about 8 policies per task, and a success head scores them. A linear
+                                probe reads the object's pose from the imagined state. The ranking is checked against
+                                simulator runs.</li>
+                            <li><b>Attacks and defenses:</b> 3 public attacks (BadNets, WaNet, GoBA) and 3 public
+                                defenses, plus our own action-signature trigger (a quick gripper open&ndash;close that
+                                changes no pixel) and Physics Cross-Check defense.</li>
+                            <li><b>Analysis:</b> how a trigger spreads over the imagined horizon, where the backdoor is
+                                stored, and how much poison it takes to flip a ranking, on two groups of Meta-World
+                                tasks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects
+        <section id="projects-template">
             <h2>Projects</h2>
             <div class="cards-grid">
                 <a href="#project-4" class="card"></a>
